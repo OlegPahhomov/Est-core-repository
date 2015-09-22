@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/
+ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+ <responseDate>2002-06-01T19:20:30Z</responseDate>
+ <request verb="ListIdentifiers" metadataPrefix="oai_lom">
+  http://koolitaja.eenet.ee:57219/Waramu3Web/OAIHandler
+</request>
+<ListIdentifiers>
+ <header>  
+  <identifier>identifier1</identifier>
+  <datestamp>1999-02-23</datestamp>
+</header>
+<header>    
+  <identifier>identifier2</identifier>
+  <datestamp>1999-03-20</datestamp>
+</header>
+<header>  
+  <identifier>identifier3</identifier>
+  <datestamp>2000-01-18</datestamp>
+</header>  
+<resumptionToken expirationDate="2002-06-01T23:20:00Z">xxx45abttyz</resumptionToken>
+</ListIdentifiers>
+</OAI-PMH>
