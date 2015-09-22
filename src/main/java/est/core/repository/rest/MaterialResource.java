@@ -3,9 +3,11 @@ package est.core.repository.rest;
 import java.io.IOException;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -21,6 +23,9 @@ public class MaterialResource {
 
     @Inject
     private MaterialService materialService;
+
+    @Context
+    private HttpServletRequest request;
 
     @GET
     @Path("GetRecord")
