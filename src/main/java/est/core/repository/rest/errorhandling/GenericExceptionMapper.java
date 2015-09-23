@@ -1,6 +1,5 @@
 package est.core.repository.rest.errorhandling;
 
-import javax.persistence.EntityTransaction;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
@@ -8,8 +7,6 @@ import javax.ws.rs.ext.Provider;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import est.core.repository.utils.DbUtils;
 
 @Provider
 public class GenericExceptionMapper implements ExceptionMapper<Throwable> {
@@ -20,7 +17,6 @@ public class GenericExceptionMapper implements ExceptionMapper<Throwable> {
     public Response toResponse(Throwable error) {
         logger.error("Handling error", error);
 
-        setTransactionRollbackOnly();
         return getResponse(error);
     }
 
@@ -35,12 +31,5 @@ public class GenericExceptionMapper implements ExceptionMapper<Throwable> {
         }
 
         return response;
-    }
-
-    private void setTransactionRollbackOnly() {
-        EntityTransaction transaction = DbUtils.getTransaction();
-        if (transaction.isActive()) {
-            transaction.setRollbackOnly();
-        }
     }
 }

@@ -25,7 +25,7 @@ public class ApplicationManager {
 
     private static final Logger logger = LoggerFactory.getLogger(ApplicationManager.class);
 
-    private static final int DEFAULT_REMOTE_PORT = 9999;
+    private static final int DEFAULT_REMOTE_PORT = 9990;
 
     private static final String STOP_COMMAND = "stop";
 

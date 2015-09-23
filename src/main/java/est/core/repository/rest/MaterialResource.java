@@ -1,6 +1,8 @@
 package est.core.repository.rest;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Map;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
@@ -18,7 +20,7 @@ import est.core.repository.service.MaterialService;
 /**
  * Created by mart on 22.09.15.
  */
-@Path("material")
+@Path("OAIHandler")
 public class MaterialResource {
 
     @Inject
@@ -28,21 +30,23 @@ public class MaterialResource {
     private HttpServletRequest request;
 
     @GET
-    @Path("GetRecord")
     @Produces(MediaType.APPLICATION_XML)
-    public String GetRecord() throws IOException, SAXException, ParserConfigurationException {
-        String credentialPath = "est_core_test_file.xml";
+    public String OAIrequest() throws IOException, SAXException, ParserConfigurationException {
+        String pathMaterial = "est_core_test_file.xml";
+        String pathIdentifiers = "listIdentifiers.xml";
+        String getRecord = "GetRecord";
+        String listIdentifiers = "ListIdentifiers";
 
-        return materialService.readXMLfiletoString(credentialPath);
+        Map<String, String[]> parameters = request.getParameterMap();
+        String[] verbValues = parameters.get("verb");
+
+        if (Arrays.asList(verbValues).contains(getRecord)) {
+        return materialService.readXMLfiletoString(pathMaterial);
+
+        } else if (Arrays.asList(verbValues).contains(listIdentifiers)) {
+            return materialService.readXMLfiletoString(pathIdentifiers);
+        }
+
+        return null;
     }
-
-    @GET
-    @Path("listIdentifiers")
-    @Produces(MediaType.APPLICATION_XML)
-    public String listIdentifiers() throws IOException, SAXException, ParserConfigurationException {
-        String credentialPath = "listIdentifiers.xml";
-
-        return materialService.readXMLfiletoString(credentialPath);
-    }
-
 }
