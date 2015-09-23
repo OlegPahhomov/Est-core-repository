@@ -10,15 +10,15 @@
     <ListIdentifiers>
         <header>
             <identifier>identifier1</identifier>
-            <datestamp>1999-02-23</datestamp>
+            <datestamp>1999-12-31T22:00:00Z</datestamp>
         </header>
         <header>
             <identifier>identifier2</identifier>
-            <datestamp>1999-03-20</datestamp>
+            <datestamp>1999-12-31T22:00:00Z</datestamp>
         </header>
         <header>
             <identifier>identifier3</identifier>
-            <datestamp>2000-01-18</datestamp>
+            <datestamp>1999-12-31T22:00:00Z</datestamp>
         </header>
         <resumptionToken expirationDate="2002-06-01T23:20:00Z">xxx45abttyz</resumptionToken>
     </ListIdentifiers>
