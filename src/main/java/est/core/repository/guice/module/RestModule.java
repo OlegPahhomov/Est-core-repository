@@ -1,7 +1,5 @@
 package est.core.repository.guice.module;
 
-import org.opensaml.saml2.binding.encoding.HTTPRedirectDeflateEncoder;
-
 import com.google.inject.servlet.ServletModule;
 
 import est.core.repository.guice.GuiceInjector;
@@ -12,7 +10,6 @@ public class RestModule extends ServletModule {
 
     @Override
     protected void configureServlets() {
-        bind(HTTPRedirectDeflateEncoder.class);
         bind(MaterialService.class);
     }
 }
