@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ee.hm</groupId>
-	<artifactId>dop</artifactId>
+	<artifactId>estCoreRepo</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0-SNAPSHOT</version>
 	
@@ -215,7 +215,7 @@
 	                    <mainClass>est.core.repository.ApplicationLauncher</mainClass>
 	                  </manifest>
 	                </archive>
-	               	<finalName>dop</finalName>
+	               	<finalName>estCoreRepo</finalName>
 	                <appendAssemblyId>false</appendAssemblyId>
 	            </configuration>
 	            <executions>
@@ -272,7 +272,6 @@
 						<artifactId>maven-jar-plugin</artifactId>
 						<configuration>
 							<excludes>
-								<exclude>ee/hm/dop/rest/DevelopmentLoginResource.class</exclude>
 							</excludes>
 						</configuration>
 					</plugin>
