@@ -12,14 +12,5 @@
             <identifier>identifier1</identifier>
             <datestamp>1999-12-31T22:00:00Z</datestamp>
         </header>
-        <header>
-            <identifier>identifier2</identifier>
-            <datestamp>1999-12-31T22:00:00Z</datestamp>
-        </header>
-        <header>
-            <identifier>identifier3</identifier>
-            <datestamp>1999-12-31T22:00:00Z</datestamp>
-        </header>
-        <resumptionToken expirationDate="2002-06-01T23:20:00Z">xxx45abttyz</resumptionToken>
     </ListIdentifiers>
 </OAI-PMH>

@@ -17,6 +17,7 @@
                     <identificator>repositoryIdentifier</identificator>
                     <!--1 or more repetitions:-->
                     <title language="est">Material title</title>
+                    <title language="rus">Material title2</title>
                     <!--Zero or more repetitions:-->
                     <language>est</language>
                     <!--Zero or more repetitions:-->

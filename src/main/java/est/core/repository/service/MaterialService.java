@@ -25,7 +25,6 @@ import est.core.repository.utils.FileUtils;
  */
 public class MaterialService {
 
-
     public String readXMLfiletoString(String credentialPath)
             throws ParserConfigurationException, SAXException, IOException {
         InputStream inputStream;
@@ -63,5 +62,4 @@ public class MaterialService {
         documentBuilderFactory.setNamespaceAware(true);
         return documentBuilderFactory.newDocumentBuilder();
     }
-
 }

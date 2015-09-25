@@ -1,15 +1,12 @@
 package est.core.repository.rest;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Map;
 
 import javax.inject.Inject;
-import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.Context;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -23,30 +20,26 @@ import est.core.repository.service.MaterialService;
 @Path("OAIHandler")
 public class MaterialResource {
 
+    private final static String GET_RECORD = "GetRecord";
+    private final static String LIST_IDENTIFIERS = "ListIdentifiers";
+    private final static String PATH_MATERIAL = "est_core_test_file.xml";
+    private final static String PATH_IDENTIFIERS = "listIdentifiers.xml";
+
     @Inject
     private MaterialService materialService;
 
-    @Context
-    private HttpServletRequest request;
-
     @GET
     @Produces(MediaType.APPLICATION_XML)
-    public String OAIrequest() throws IOException, SAXException, ParserConfigurationException {
-        String pathMaterial = "est_core_test_file.xml";
-        String pathIdentifiers = "listIdentifiers.xml";
-        String getRecord = "GetRecord";
-        String listIdentifiers = "ListIdentifiers";
+    public String get(@QueryParam("verb") String verb) throws IOException, SAXException, ParserConfigurationException {
 
-        Map<String, String[]> parameters = request.getParameterMap();
-        String[] verbValues = parameters.get("verb");
+        String response = null;
 
-        if (Arrays.asList(verbValues).contains(getRecord)) {
-        return materialService.readXMLfiletoString(pathMaterial);
-
-        } else if (Arrays.asList(verbValues).contains(listIdentifiers)) {
-            return materialService.readXMLfiletoString(pathIdentifiers);
+        if (verb.equals(GET_RECORD)) {
+            response = materialService.readXMLfiletoString(PATH_MATERIAL);
+        } else if (verb.equals(LIST_IDENTIFIERS)) {
+            response = materialService.readXMLfiletoString(PATH_IDENTIFIERS);
         }
 
-        return null;
+        return response;
     }
 }
