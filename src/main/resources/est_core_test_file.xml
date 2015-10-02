@@ -69,7 +69,7 @@
                         <month>12</month>
                         <year>2012</year>
                     </date>
-                    <resource>https://www.youtube.com/watch?v=gSWbx3CvVUk</resource>
+                    <resource>http://oxygen.netgroupdigital.com:8081/rest/materialContent</resource>
                     <!--1 or more repetitions:-->
                     <resourceType>videoSharingPlatform</resourceType>
                     <!--Zero or more repetitions:-->
