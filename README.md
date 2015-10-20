@@ -47,3 +47,10 @@ In my.ini or my.cnf under [mysqld] add: character-set-server=utf8
 
 * **server.port** - the port that server starts.
 * **command.listener.port** - the port used to listening for commands to be executed on server. Currently only shutdown command is available.
+
+### Keystore
+To import the Ekoolikott public key cert:
+
+	keytool -import -alias eKoolikott -file eKoolikottPublicKeyCert.cer -keystore eKoolikottKeystore
+	
+You will be prompted for a password and to trust the certificate.

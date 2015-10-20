@@ -1,14 +1,12 @@
-package est.core.repository.rest.jackson.map;
-
-import java.io.IOException;
-
-import org.joda.time.DateTime;
+package est.core.repository.rest;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
-
 import est.core.repository.utils.DateUtils;
+import org.joda.time.DateTime;
+
+import java.io.IOException;
 
 /**
  * Created by mart.laus on 6.07.2015.

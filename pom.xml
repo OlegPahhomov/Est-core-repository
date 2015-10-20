@@ -131,6 +131,16 @@
             <artifactId>usertype.core</artifactId>
             <version>3.2.0.GA</version>
         </dependency>
+		<dependency>
+			<groupId>org.opensaml</groupId>
+			<artifactId>opensaml</artifactId>
+			<version>2.6.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20150729</version>
+		</dependency>
 
         <!-- Testing -->
 		

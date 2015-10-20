@@ -1,10 +1,8 @@
 package est.core.repository.rest.jackson.map;
 
-import static org.easymock.EasyMock.replay;
-import static org.easymock.EasyMock.verify;
-
-import java.io.IOException;
-
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.databind.SerializerProvider;
+import est.core.repository.rest.LocalDateSerializer;
 import org.easymock.EasyMockRunner;
 import org.easymock.Mock;
 import org.easymock.TestSubject;
@@ -12,8 +10,10 @@ import org.joda.time.LocalDate;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.databind.SerializerProvider;
+import java.io.IOException;
+
+import static org.easymock.EasyMock.replay;
+import static org.easymock.EasyMock.verify;
 
 @RunWith(EasyMockRunner.class)
 public class LocalDateSerializerTest {
