@@ -51,6 +51,13 @@ In my.ini or my.cnf under [mysqld] add: character-set-server=utf8
 ### Keystore
 To import the Ekoolikott public key cert:
 
-	keytool -import -alias eKoolikott -file eKoolikottPublicKeyCert.cer -keystore eKoolikottKeystore
+	keytool -import -alias eKoolikott -file eKoolikottPublicKeyCert.cer -keystore eKoolikott.keystore
 	
-You will be prompted for a password and to trust the certificate.
+You will be prompted for a password (examplePassword) and to trust the certificate.
+
+Add all keystore configurations to **custom.properties**. From the example keytool command the configuration would be: 
+```
+	keystore.filename=eKoolikott.keystore
+	keystore.password=exampleStorePass
+	keystore.signingEntityID=examplePassword
+```
