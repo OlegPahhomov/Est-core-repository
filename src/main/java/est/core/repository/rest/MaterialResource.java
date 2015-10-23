@@ -1,7 +1,6 @@
 package est.core.repository.rest;
 
 import est.core.repository.service.MaterialService;
-import est.core.repository.service.UserValidationService;
 import org.xml.sax.SAXException;
 
 import javax.inject.Inject;
@@ -28,18 +27,11 @@ public class MaterialResource {
     @Inject
     private MaterialService materialService;
 
-    @Inject
-    private UserValidationService userValidationService;
-
     @GET
     @Produces(MediaType.APPLICATION_XML)
     public String get(@QueryParam("verb") String verb, @QueryParam("dop_token") String signedUserData) throws IOException, SAXException, ParserConfigurationException, KeyStoreException {
 
         String response = null;
-        System.out.println(signedUserData);
-        if (!userValidationService.validateUser(signedUserData)) {
-            throw new RuntimeException("This user is not permitted to access these materials");
-        }
 
         if (verb.equals(GET_RECORD)) {
             response = materialService.readXMLfiletoString(PATH_MATERIAL);

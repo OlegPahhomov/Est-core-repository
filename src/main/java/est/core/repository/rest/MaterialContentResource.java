@@ -1,27 +1,40 @@
 package est.core.repository.rest;
 
-import javax.servlet.http.HttpServletResponse;
+import est.core.repository.service.UserValidationService;
+import org.xml.sax.SAXException;
+
+import javax.inject.Inject;
+import javax.ws.rs.Encoded;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.Context;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URLDecoder;
+import java.security.KeyStoreException;
 
 /**
  * Created by mart on 2.10.15.
  */
 
-@Path("materialContent")
+@Path("repoMaterialSource")
 public class MaterialContentResource {
 
-    @Context
-    private HttpServletResponse response;
+    @Inject
+    private UserValidationService userValidationService;
 
     @GET
-    @Produces(MediaType.APPLICATION_XML)
-    public void get() throws IOException {
-        String url = "https://en.wikipedia.org/wiki/Star_Wars";
-        response.sendRedirect(response.encodeRedirectURL(url));
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response get(@QueryParam("id") String id, @QueryParam("dop_token") @Encoded String signedUserData) throws IOException, SAXException, ParserConfigurationException, KeyStoreException, URISyntaxException {
+        signedUserData = URLDecoder.decode(signedUserData, "UTF-8");
+
+        URI location = new URI("https://en.wikipedia.org/wiki/Star_Wars");
+
+        return Response.temporaryRedirect(location).build();
     }
 }
