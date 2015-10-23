@@ -33,6 +33,9 @@ public class MaterialContentResource {
     public Response get(@QueryParam("id") String id, @QueryParam("dop_token") @Encoded String signedUserData) throws IOException, SAXException, ParserConfigurationException, KeyStoreException, URISyntaxException {
         signedUserData = URLDecoder.decode(signedUserData, "UTF-8");
 
+        if (!userValidationService.validateUser(signedUserData)) {
+            throw new RuntimeException("This user is not permitted to access these materials");
+        }
         URI location = new URI("https://en.wikipedia.org/wiki/Star_Wars");
 
         return Response.temporaryRedirect(location).build();

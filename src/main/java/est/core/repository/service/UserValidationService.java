@@ -32,12 +32,20 @@ public class UserValidationService {
 
         String userData = EncryptionUtils.decrypt(bytes, certificate.getPublicKey());
 
-        JSONObject userDataObject = new JSONObject(userData);
-        String authProvider = userDataObject.getString("authProvider");
-        String createdAt = userDataObject.getString("createdAt");
-        JSONObject authenticationContext = userDataObject.getJSONObject("authCtx");
+        try {
+            JSONObject userDataObject = new JSONObject(userData);
+            String authProvider = userDataObject.getString("authProvider");
+            String createdAt = userDataObject.getString("createdAt");
+            JSONObject authenticationContext = userDataObject.getJSONObject("authCtx");
+            String roles = authenticationContext.getString("roles");
+            String schacHomeOrganization = authenticationContext.getString("schacHomeOrganization");
 
-        return true;
+            //validating if user is from TAAT test organisation
+            return schacHomeOrganization.equals("eenet.ee");
+
+        } catch (Exception e) {
+            //not logged in with taat
+            throw new RuntimeException("The user data is not a valid json object.");
+        }
     }
-
 }
