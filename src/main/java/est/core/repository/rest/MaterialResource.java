@@ -1,7 +1,6 @@
 package est.core.repository.rest;
 
 import est.core.repository.service.MaterialService;
-import org.xml.sax.SAXException;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -9,9 +8,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
-import java.security.KeyStoreException;
 
 /**
  * Created by mart on 22.09.15.
@@ -29,7 +25,7 @@ public class MaterialResource {
 
     @GET
     @Produces(MediaType.APPLICATION_XML)
-    public String get(@QueryParam("verb") String verb, @QueryParam("dop_token") String signedUserData) throws IOException, SAXException, ParserConfigurationException, KeyStoreException {
+    public String get(@QueryParam("verb") String verb) throws Exception {
 
         String response = null;
 

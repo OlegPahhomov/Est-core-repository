@@ -1,7 +1,6 @@
 package est.core.repository.rest;
 
 import est.core.repository.service.UserValidationService;
-import org.xml.sax.SAXException;
 
 import javax.inject.Inject;
 import javax.ws.rs.Encoded;
@@ -11,12 +10,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URLDecoder;
-import java.security.KeyStoreException;
 
 /**
  * Created by mart on 2.10.15.
@@ -30,7 +25,7 @@ public class MaterialContentResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public Response get(@QueryParam("id") String id, @QueryParam("dop_token") @Encoded String signedUserData) throws IOException, SAXException, ParserConfigurationException, KeyStoreException, URISyntaxException {
+    public Response get(@QueryParam("id") String id, @QueryParam("dop_token") @Encoded String signedUserData) throws Exception{
         signedUserData = URLDecoder.decode(signedUserData, "UTF-8");
 
         if (!userValidationService.validateUser(signedUserData)) {
