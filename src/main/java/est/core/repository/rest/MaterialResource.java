@@ -1,13 +1,13 @@
 package est.core.repository.rest;
 
-import est.core.repository.service.MaterialService;
-
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+
+import est.core.repository.service.MaterialService;
 
 /**
  * Created by mart on 22.09.15.
@@ -25,14 +25,16 @@ public class MaterialResource {
 
     @GET
     @Produces(MediaType.APPLICATION_XML)
-    public String get(@QueryParam("verb") String verb) throws Exception {
+    public String get(@QueryParam("verb") String verb, @QueryParam("resumptionToken") String token) throws Exception {
 
         String response = null;
 
         if (verb.equals(GET_RECORD)) {
             response = materialService.readXMLfiletoString(PATH_MATERIAL);
         } else if (verb.equals(LIST_IDENTIFIERS)) {
-            response = materialService.readXMLfiletoString(PATH_IDENTIFIERS);
+            if(token == null) {
+                response = materialService.readXMLfiletoString(PATH_IDENTIFIERS);
+            }
         }
 
         return response;
