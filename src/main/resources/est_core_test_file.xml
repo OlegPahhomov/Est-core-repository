@@ -1,4 +1,8 @@
-<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd" xmlns:xs="http://www.estcore/2015/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/
+    http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
     <responseDate>2015-09-22T13:43:05Z</responseDate>
     <request verb="GetRecord" identifier="6d0a950c264cbbae4947a6c3f67f9a3aa7aab89d" metadataPrefix="oai_lom">
         http://koolitaja.eenet.ee:57219/Waramu3Web/OAIHandler
@@ -13,90 +17,121 @@
                 <setSpec>1</setSpec>
             </header>
             <metadata>
-                <xs:metadata xmlns:xs="http://www.estcore/2015/XMLSchema">
-                    <identificator>repositoryIdentifier</identificator>
-                    <!--1 or more repetitions:-->
-                    <title language="est">Material title</title>
-                    <title language="rus">Material title2</title>
-                    <!--Zero or more repetitions:-->
-                    <language>est</language>
-                    <!--Zero or more repetitions:-->
-                    <description language="est">material description est</description>
-                    <description language="rus">material description rus</description>
-                    <!--Zero or more repetitions:-->
-                    <keyword language="est">keyword</keyword>
-                    <contributors>
-                        <!--You have a CHOICE of the next 5 items at this level-->
-                        <author>
-                            <!--Optional:-->
-                            <firstName>author firstname</firstName>
-                            <surname>author surname</surname>
-                            <!--Optional:-->
-                            <email>author@author.com</email>
-                        </author>
-                        <publisher>
-                            <name>publishers name</name>
-                            <!--Optional:-->
-                            <website>publisher.com</website>
-                        </publisher>
-                        <editor>
-                            <!--Optional:-->
-                            <firstName>editor firstname</firstName>
-                            <surname>editor lastname</surname>
-                            <!--Optional:-->
-                            <email>editor@editor.com</email>
-                        </editor>
-                        <curator>
-                            <!--Optional:-->
-                            <firstName>curator firstName</firstName>
-                            <surname>curator surname</surname>
-                            <!--Optional:-->
-                            <email>curator@site.com</email>
-                        </curator>
-                        <unknown>
-                            <!--Optional:-->
-                            <firstName>unknown firstName</firstName>
-                            <surname>unknown surname</surname>
-                            <!--Optional:-->
-                            <email>unknown email</email>
-                        </unknown>
-                    </contributors>
-                    <!--Optional:-->
-                    <date>
-                        <!--Optional:-->
-                        <day>31</day>
-                        <!--Optional:-->
-                        <month>12</month>
-                        <year>2012</year>
-                    </date>
-                    <resource>http://oxygen.netgroupdigital.com:8081/rest/materialContent</resource>
-                    <!--1 or more repetitions:-->
-                    <resourceType>videoSharingPlatform</resourceType>
-                    <!--Zero or more repetitions:-->
-                    <educationalContext>preSchoolEducation</educationalContext>
-                    <!--1 or more repetitions:-->
-                    <ageRange>
-                        <min>12</min>
-                        <!--Optional:-->
-                        <max>16</max>
-                    </ageRange>
-                    <!--Zero or more repetitions:-->
-                    <recommendation language="est">recommendation</recommendation>
-                    <isPaid>true</isPaid>
-                    <!--Optional:-->
-                    <isRestricted>true</isRestricted>
-                    <!--Optional:-->
-                    <rights>CCBY</rights>
-                    <!--Zero or more repetitions:-->
+
+                <xm:estcore
+                        xmlns:lom="http://ltsc.ieee.org/xsd/LOM"
+                        xmlns:xm="http://www.estcore/2015/XMLSchema"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://www.estcore/2015/XMLSchema file:/home/mart/ESTCORE/estcoreOnlyNeeded.xsd"
+                        xmlns="">
+                    <general>
+                        <title uniqueElementName="title">
+                            <lom:string language="fr-FR">first title</lom:string>
+                            <lom:string language="et">teine pealkiri</lom:string>
+
+                        </title>
+                        <language uniqueElementName="language">en-US</language>
+                        <language uniqueElementName="language">en-US</language>
+                        <description uniqueElementName="description">
+                            <lom:string language="en-GB">string1</lom:string>
+                        </description>
+                        <description uniqueElementName="description">
+                            <lom:string language="ee">string2</lom:string>
+                        </description>
+                        <keyword>
+                        </keyword>
+                        <keyword>
+                            <lom:string language="en-US">string3</lom:string>
+                        </keyword>
+                    </general>
+                    <lifeCycle>
+                        <contribute>
+                            <lom:date uniqueElementName="date">
+                                <lom:description uniqueElementName="description">
+                                    <lom:string language="en-US">string4</lom:string>
+                                    <lom:string language="en-US">string5</lom:string>
+                                </lom:description>
+                            </lom:date>
+                            <lom:entity>entity0</lom:entity>
+                        </contribute>
+                        <contribute>
+                            <lom:entity>entity1</lom:entity>
+                            <lom:date uniqueElementName="date">
+                                <lom:description uniqueElementName="description">
+                                    <lom:string language="en-US">string6</lom:string>
+                                </lom:description>
+                            </lom:date>
+                        </contribute>
+                    </lifeCycle>
+                    <technical>
+                        <location>https://oxygen.netgroupdigital.com/rest/repoMaterialSource</location>
+                    </technical>
+                    <educational>
+                        <learningResourceType>audio</learningResourceType>
+                        <learningResourceType>audio</learningResourceType>
+                        <context>preschoolEducation</context>
+                        <context>preschoolEducation</context>
+                        <typicalAgeRange>0-0</typicalAgeRange>
+                        <typicalAgeRange>0-0</typicalAgeRange>
+                    </educational>
+                    <educational>
+                        <learningResourceType>audio</learningResourceType>
+                        <learningResourceType>audio</learningResourceType>
+                        <context>preschoolEducation</context>
+                        <context>preschoolEducation</context>
+                        <typicalAgeRange>0-0</typicalAgeRange>
+                        <typicalAgeRange>0-0</typicalAgeRange>
+                    </educational>
+                    <rights uniqueElementName="rights">
+                        <lom:description uniqueElementName="description">
+                        </lom:description>
+                        <lom:description uniqueElementName="description">
+                            <lom:string language="en-US">string7</lom:string>
+                        </lom:description>
+                    </rights>
                     <classification>
-                        <name>Foreign language</name>
-                        <classification>
-                            <name>Latin</name>
-                        </classification>
+                        <taxonPath>
+                            <gymnasiumTaxon>
+                                <curriculum>KLRÕK2011</curriculum>
+                                <domain>Mina ja keskkond</domain>
+                                <subject>Estonian</subject>
+                                <topic>Ajaloo algõpetus</topic>
+                                <subtopic>Ajaarvamine</subtopic>
+                            </gymnasiumTaxon>
+                        </taxonPath>
+                        <taxonPath>
+                            <gymnasiumTaxon>
+                                <curriculum>KLRÕK2011</curriculum>
+                                <domain>Mina ja keskkond</domain>
+                                <subject>Estonian</subject>
+                                <topic>Ajaloo algõpetus</topic>
+                                <subtopic>Ajaarvamine</subtopic>
+                            </gymnasiumTaxon>
+                        </taxonPath>
                     </classification>
-                    <!--Optional:-->
-                    <imgSrc>cXVhZQ==</imgSrc>
-                </xs:metadata>
+                    <classification>
+                        <taxonPath>
+                            <gymnasiumTaxon>
+                                <curriculum>KLRÕK2011</curriculum>
+                                <domain>Mina ja keskkond</domain>
+                                <subject>Estonian</subject>
+                                <topic>Ajaloo algõpetus</topic>
+                                <subtopic>Ajaarvamine</subtopic>
+                            </gymnasiumTaxon>
+                        </taxonPath>
+                        <taxonPath>
+                            <basicSchoolTaxon>
+                                <curriculum>KLRÕK2011</curriculum>
+                                <domain>Mina ja keskkond</domain>
+                                <subject>Estonian</subject>
+                                <topic>Ajaloo algõpetus</topic>
+                                <subtopic>Ajaarvamine</subtopic>
+                            </basicSchoolTaxon>
+                        </taxonPath>
+                    </classification>
+                    <imgSrc>ZGVmYXVsdA==</imgSrc>
+                </xm:estcore>
+
             </metadata>
         </record>
     </GetRecord>
