@@ -108,11 +108,6 @@
                                 <subtopic>Ajaarvamine</subtopic>
                             </gymnasiumTaxon>
                         </taxonPath>
-                        <taxonPath>
-                            <vocationalTaxon>
-                                <domain>Computer Science</domain>
-                            </vocationalTaxon>
-                        </taxonPath>
                     </classification>
                     <classification>
                         <taxonPath>
