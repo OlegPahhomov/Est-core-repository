@@ -102,9 +102,9 @@
                         <taxonPath>
                             <gymnasiumTaxon>
                                 <curriculum>KLRÕK2011</curriculum>
-                                <domain>Language and literature</domain>
-                                <subject>Estonian</subject>
-                                <topic>Ajaloo algõpetus</topic>
+                                <domain>Electives</domain>
+                                <subject>Religious studies</subject>
+                                <topic>Secondary Education Topic1</topic>
                                 <subtopic>Ajaarvamine</subtopic>
                             </gymnasiumTaxon>
                         </taxonPath>
@@ -118,8 +118,8 @@
                         <taxonPath>
                             <basicSchoolTaxon>
                                 <curriculum>KLRÕK2011</curriculum>
-                                <domain>Foreign language</domain>
-                                <subject>English</subject>
+                                <domain>Social studies</domain>
+                                <subject>History</subject>
                                 <topic>Eesti ajalugu</topic>
                                 <subtopic>Ajaarvamine</subtopic>
                             </basicSchoolTaxon>
