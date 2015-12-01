@@ -96,7 +96,7 @@
                     <classification>
                         <taxonPath>
                             <preschoolTaxon>
-                                <domain>Mina ja keskkond</domain>
+                                <domain>Matemaatika</domain>
                                 <topic>Preschool Topic1</topic>
                                 <subtopic>Subtopic for Preschool Topic1</subtopic>
                             </preschoolTaxon>
@@ -104,10 +104,10 @@
                         <taxonPath>
                             <gymnasiumTaxon>
                                 <curriculum>KLRÕK2011</curriculum>
-                                <domain>Language and literature</domain>
-                                <subject>Estonian</subject>
-                                <topic>Ajaloo algõpetus</topic>
-                                <subtopic>Ajaarvamine</subtopic>
+                                <domain>Electives</domain>
+                                <subject>Religious studies</subject>
+                                <topic>Secondary Education Topic1</topic>
+                                <subtopic>Subtopic for Secondary Education Topic1</subtopic>
                             </gymnasiumTaxon>
                         </taxonPath>
                         <taxonPath>
