@@ -96,15 +96,17 @@
                     <classification>
                         <taxonPath>
                             <preschoolTaxon>
-                                <domain>Matemaatika</domain>
+                                <domain>Mina ja keskkond</domain>
+                                <topic>Preschool Topic1</topic>
+                                <subtopic>Subtopic for Preschool Topic1</subtopic>
                             </preschoolTaxon>
                         </taxonPath>
                         <taxonPath>
                             <gymnasiumTaxon>
                                 <curriculum>KLRÕK2011</curriculum>
-                                <domain>Electives</domain>
-                                <subject>Religious studies</subject>
-                                <topic>Secondary Education Topic1</topic>
+                                <domain>Language and literature</domain>
+                                <subject>Estonian</subject>
+                                <topic>Ajaloo algõpetus</topic>
                                 <subtopic>Ajaarvamine</subtopic>
                             </gymnasiumTaxon>
                         </taxonPath>
@@ -114,6 +116,7 @@
                                 <specialization>Computers and Networks</specialization>
                                 <module>Majanduse alused</module>
                                 <topic>Vocational Education Topic1</topic>
+                                <subtopic>Subtopic for Vocational Education</subtopic>
                             </vocationalTaxon>
                         </taxonPath>
                     </classification>
@@ -121,10 +124,10 @@
                         <taxonPath>
                             <basicSchoolTaxon>
                                 <curriculum>KLRÕK2011</curriculum>
-                                <domain>Social studies</domain>
-                                <subject>History</subject>
+                                <domain>Foreign language</domain>
+                                <subject>English</subject>
                                 <topic>Eesti ajalugu</topic>
-                                <subtopic>Ajaarvamine</subtopic>
+                                <subtopic>Ajalooallikad</subtopic>
                             </basicSchoolTaxon>
                         </taxonPath>
                     </classification>
