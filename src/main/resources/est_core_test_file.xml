@@ -82,14 +82,14 @@
                                 <![CDATA[
 								BEGIN:VCARD
                                 VERSION:4.0
-                                URL:https://www.google.com/
-                                N:BigPublisher;;;Mr;
-                                FN:BigPublisher
+                                URL:https://www.lahepublisher.com/
+                                N:Sammal;Lammas;Habe;Missus;
+                                FN:Sammal Habe
                                 END:VCARD
 								]]>
                             </lom:entity>
                             <lom:date uniqueElementName="date">
-                                <lom:dateTime>1999-12-31T22:00:00</lom:dateTime>
+                                <lom:dateTime>1066-12-31T22:00:00</lom:dateTime>
                             </lom:date>
                         </contribute>
                     </lifeCycle>
