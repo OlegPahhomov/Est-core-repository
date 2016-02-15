@@ -1,19 +1,21 @@
 package est.core.repository.service;
 
-import est.core.repository.security.KeyStoreUtils;
-import est.core.repository.utils.EncryptionUtils;
-import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.configuration.Configuration;
-import org.json.JSONObject;
+import static est.core.repository.utils.ConfigurationProperties.KEYSTORE_FILENAME;
+import static est.core.repository.utils.ConfigurationProperties.KEYSTORE_PASSWORD;
+import static est.core.repository.utils.ConfigurationProperties.KEYSTORE_SIGNING_ENTITY_ID;
 
-import javax.inject.Inject;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
 import java.security.cert.Certificate;
 
-import static est.core.repository.utils.ConfigurationProperties.KEYSTORE_FILENAME;
-import static est.core.repository.utils.ConfigurationProperties.KEYSTORE_PASSWORD;
-import static est.core.repository.utils.ConfigurationProperties.KEYSTORE_SIGNING_ENTITY_ID;
+import javax.inject.Inject;
+
+import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.configuration.Configuration;
+import org.json.JSONObject;
+
+import est.core.repository.security.KeyStoreUtils;
+import est.core.repository.utils.EncryptionUtils;
 
 
 /**
@@ -34,17 +36,13 @@ public class UserValidationService {
 
         try {
             JSONObject userDataObject = new JSONObject(userData);
-            String authProvider = userDataObject.getString("authProvider");
             String createdAt = userDataObject.getString("createdAt");
-            JSONObject authenticationContext = userDataObject.getJSONObject("authCtx");
-            String roles = authenticationContext.getString("roles");
-            String schacHomeOrganization = authenticationContext.getString("schacHomeOrganization");
 
-            //validating if user is from TAAT test organisation
-            return schacHomeOrganization.equals("eenet.ee");
+            //validating if the json object has a date
+            return createdAt.length() > 0;
 
         } catch (Exception e) {
-            //not logged in with taat
+            //object has no creation date or is broken
             throw new RuntimeException("The user data is not a valid json object.");
         }
     }
