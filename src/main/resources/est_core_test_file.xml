@@ -125,10 +125,10 @@
                         <taxonPath>
                             <gymnasiumTaxon>
                                 <curriculum>KLRÕK2011</curriculum>
-                                <domain>Electives</domain>
-                                <subject>Religious studies</subject>
-                                <topic>Secondary Education Topic1</topic>
-                                <subtopic>Subtopic for Secondary Education Topic1</subtopic>
+                                <domain>keel ja kirjandus</domain>
+                                <subject>eesti keel</subject>
+                                <topic>keel ja ühiskond</topic>
+                                <subtopic>eesti keel ja teised keeled</subtopic>
                             </gymnasiumTaxon>
                         </taxonPath>
                         <taxonPath>
@@ -150,10 +150,10 @@
                         <taxonPath>
                             <basicSchoolTaxon>
                                 <curriculum>KLRÕK2011</curriculum>
-                                <domain>Social studies</domain>
-                                <subject>History</subject>
-                                <topic>Eesti ajalugu</topic>
-                                <subtopic>Muinasaeg</subtopic>
+                                <domain>valikõppeained</domain>
+                                <subject>informaatika</subject>
+                                <topic>infoühiskonna tehnoloogiad</topic>
+                                <subtopic>sisutootmine</subtopic>
                             </basicSchoolTaxon>
                         </taxonPath>
                         <crossCurricularThemesAndCompetences>
