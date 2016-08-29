@@ -11,9 +11,9 @@
         <record>
             <header>
                 <identifier>
-                    identifier1
+                    identifier3
                 </identifier>
-                <datestamp>2001-12-31T22:00:00Z</datestamp>
+                <datestamp>2016-08-29T22:00:00Z</datestamp>
                 <setSpec>1</setSpec>
             </header>
             <metadata>
@@ -26,21 +26,22 @@
                         xmlns="">
                     <general>
                         <title uniqueElementName="title">
-                            <lom:string language="en-US">first title</lom:string>
-                            <lom:string language="et">teine pealkiri</lom:string>
+                            <lom:string language="en-US">katarina test</lom:string>
+                            <lom:string language="et">29.08.2016</lom:string>
 
                         </title>
                         <language uniqueElementName="language">en-US</language>
                         <language uniqueElementName="language">en-US</language>
                         <description uniqueElementName="description">
-                            <lom:string language="en-GB">description 1</lom:string>
-                            <lom:string language="et">description 2</lom:string>
+                            <lom:string language="en-GB">testimise katse 1</lom:string>
+                            <lom:string language="et">testimise katse 2</lom:string>
                         </description>
                         <keyword>
                         </keyword>
                         <keyword>
-                            <lom:string language="en-US">tag1</lom:string>
-                            <lom:string language="en-US">tag2</lom:string>
+                            <lom:string language="en-US">katarinatestib</lom:string>
+                            <lom:string language="en-US">doptest</lom:string>
+							<lom:string language="en-US">tagname</lom:string>
                         </keyword>
                     </general>
                     <lifeCycle>
@@ -67,7 +68,7 @@
                                 BEGIN:VCARD
 								VERSION:3.0
 								N:Balaam;Andrew;;;
-								FN:Andrew Balaam
+								FN:Edgar Poe
 								ORG:Languages Online
 								EMAIL;TYPE=internet,pref:acb@rgshw.com
 								END:VCARD
@@ -89,7 +90,7 @@
 								]]>
                             </lom:entity>
                             <lom:date uniqueElementName="date">
-                                <lom:dateTime>1066-12-31T22:00:00</lom:dateTime>
+                                <lom:dateTime>1991-12-31T22:00:00</lom:dateTime>
                             </lom:date>
                         </contribute>
                     </lifeCycle>
@@ -97,7 +98,7 @@
                         <location>https://oxygen.netgroupdigital.com/rest/repoMaterialSource</location>
                     </technical>
                     <educational>
-                        <learningResourceType>audio</learningResourceType>
+                        <learningResourceType>assessment</learningResourceType>
                         <learningResourceType>video</learningResourceType>
                         <context>preschoolEducation</context>
                         <context>basicEducation</context>
