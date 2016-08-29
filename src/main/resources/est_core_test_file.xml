@@ -11,9 +11,9 @@
         <record>
             <header>
                 <identifier>
-                    identifier2
+                    identifier1
                 </identifier>
-                <datestamp>1999-12-31T22:00:00Z</datestamp>
+                <datestamp>2001-12-31T22:00:00Z</datestamp>
                 <setSpec>1</setSpec>
             </header>
             <metadata>
