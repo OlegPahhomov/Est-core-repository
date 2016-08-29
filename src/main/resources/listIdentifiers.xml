@@ -9,7 +9,7 @@
     </request>
     <ListIdentifiers>
         <header>
-            <identifier>identifier1</identifier>
+            <identifier>identifier2</identifier>
             <datestamp>1999-12-31T22:00:00Z</datestamp>
         </header>
         <resumptionToken completeListSize="1" cursor="1"/>
