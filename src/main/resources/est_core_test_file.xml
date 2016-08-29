@@ -13,7 +13,7 @@
                 <identifier>
                     identifier3
                 </identifier>
-                <datestamp>2016-10-29T22:00:00Z</datestamp>
+                <datestamp>2016-11-29T22:00:00Z</datestamp>
                 <setSpec>1</setSpec>
             </header>
             <metadata>
@@ -26,7 +26,7 @@
                         xmlns="">
                     <general>
                         <title uniqueElementName="title">
-                            <lom:string language="en-US">katarina test2</lom:string>
+                            <lom:string language="en-US">See peab muutma</lom:string>
                             <lom:string language="et">29.08.2016</lom:string>
 
                         </title>
